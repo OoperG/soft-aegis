@@ -1,0 +1,13 @@
+version: '3'
+services:
+  react-ui:
+    build:
+      context: ./admin
+    ports:
+      - "3000:3000"
+    container_name: admin
+    restart: always
+    stdin_open: true
+    volumes:
+      - /Users/mrizzi/Epitech/admin-soft-poc/admin:/usr/src/app/admin
+      - /usr/src/app/admin/node_modules
